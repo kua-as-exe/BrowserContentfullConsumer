@@ -13,7 +13,7 @@ import nodePolyfills from 'rollup-plugin-node-polyfills';
 export default {
   input: "src/main.js",
   output: {
-    file: "dist/bundle.js",
+    file: "dist/contentfulConsumer.min.js",
     format: "iife",
     sourcemap: true,
   },

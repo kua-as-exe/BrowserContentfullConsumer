@@ -12,11 +12,7 @@ window.loadContentfulData = ({
     templates,
     query
 }) => {
-    console.log(elementID,
-        spaceID,
-        APItoken,
-        templates,
-        query)
+    console.log(elementID, spaceID, APItoken, templates, query)
     ReactDOM.render(
         <ContentfulConsumer 
             spaceID={spaceID}
