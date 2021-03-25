@@ -7,6 +7,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import json from 'rollup-plugin-json';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
+import { terser } from "rollup-plugin-terser";
 
 //import resolve from 'rollup-plugin-node-resolve';
 
@@ -33,6 +34,7 @@ export default {
         include: 'node_modules/**'
     }),
     json(),
+    terser(),
     serve({
       open: true,
       verbose: true,
