@@ -5,13 +5,13 @@ Package to easily connect Contentful API to your static HTML webpages rendered b
 
 Include the script inside `<head>` tag:
 ```html
-<script src="./contentfulConsumer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JorgeArreolaS/BrowserContentfullConsumer@1.0.0/dist/contentfulConsumer.min.js"></script>
 ```
 Example:
 ```html
 <head>
     ...
-    <script src="./contentfulConsumer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JorgeArreolaS/BrowserContentfullConsumer@1.0.0/dist/contentfulConsumer.min.js"></script>
     ...
 </head>
 ```
