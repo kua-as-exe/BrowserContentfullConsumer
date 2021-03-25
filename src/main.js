@@ -5,6 +5,8 @@ import * as Babel from '@babel/standalone';
 
 window.React = React;
 window.Babel = Babel;
+window.getGraphqlLink = ({spaceID, APItoken}) => `https://graphql.contentful.com/content/v1/spaces/${spaceID}/explore?access_token=${APItoken}`;
+
 window.loadContentfulData = ({
     elementID,
     spaceID,

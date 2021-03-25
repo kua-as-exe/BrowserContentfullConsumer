@@ -32,12 +32,15 @@ export const ContentfulConsumer = ({templates, query, spaceID, APItoken}) => {
 
     if(loading) return templates.loading();
     const {item: ItemTemplate} = templates;
-    if(!loading && ItemTemplate && data){
+    if(!loading && data){
         const itemsData = Object.values(data.data)[0].items;
         console.log(itemsData);
-        if(Array.isArray(itemsData)) 
-            return itemsData.map( (itemData, index) => <ItemTemplate key={index} {...itemData}/>)
-        return ItemTemplate(itemsData);
+        if(ItemTemplate){
+            if(Array.isArray(itemsData)) 
+                return itemsData.map( (itemData, index) => <ItemTemplate key={index} {...itemData}/>)
+            return ItemTemplate(itemsData);
+        }
+        return <pre>{JSON.stringify(itemsData, null, 2)}</pre>
     } 
     return <></>;
 }
